@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>%TITLE%</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-family: "微软雅黑";
+	font-size: 36px;
+	color: #FFFFFF;
+}
+.STYLE3 {font-size: 14px}
+.STYLE4 {font-size: 18px}
+.STYLE5 {font-size: 18px; font-family: "微软雅黑"; }
+.STYLE6 {
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+}
+body {
+	background-color: #0078D2;
+}
+.STYLE7 {color: #666666}
+.STYLE2 {
+	font-size: large;
+	color: #666666;
+	font-family: "微软雅黑";
+}
+-->
+</style>
+</head>
+
+<body>
+<div align="center" class="STYLE4">
+  <p class="STYLE1"><span class="STYLE3">　</span>%TITLE%</p>
+  <p class="STYLE1 STYLE4">考试系统基于 MaxXSoft Examer 构建</p>
+</div>
+<div align="center" style="background-color:#FFFFFF">
+  <p>&nbsp;</p>
+  <p class="STYLE5">简答题（进度：第 %NUMNOW% 题，共 %QUENUM% 题）</p>
+  <p class="STYLE5">本题分值：%SCR% 分 </p>
+  <table width="650" border="0">
+    <tr>
+      <td width="657" height="15" class="STYLE5"><p class="STYLE7">%QUESTION%</p>      </td>
+    </tr>
+  </table>
+  <form action="/answer!%NUMNOW%" method="post" enctype="application/x-www-form-urlencoded" name="frmAns" id="frmAns">
+    <p class="STYLE2">
+      <label>
+      <textarea name="txtAns" class="STYLE2" id="txtAns" style="width:450px; height:250px"></textarea>
+      </label>
+    </p>
+    <p class="STYLE2">
+      <label>
+      <input name="btnNext" type="button" class="STYLE2" id="btnNext" value="回答完毕，下一题" onclick="SubmitAns();" />
+      </label>
+    </p>
+  </form>
+  <p class="STYLE2">
+    <label></label>
+  </p>
+  <p class="STYLE2">&nbsp; </p>
+</div>
+<div align="center" class="STYLE4">
+  <p class="STYLE6">　MaxXSoft Examer Ver. %VERSION%</p>
+  <p class="STYLE6">Powered By <a href="http://MaxXSoft.net" target="_blank" class="STYLE6">MaxXSoft</a>　|　版权所有 2010-%YEAR% <a href="http://MaxXSoft.net" target="_blank" class="STYLE6">曼软工作室</a></p>
+  <p class="STYLE1"><span class="STYLE3">　</span></p>
+</div>
+</body>
+</html>
+
+<SCRIPT LANGUAGE="javascript"> 
+<!-- 
+function SubmitAns()
+{
+  var txt=document.getElementById("txtAns").value;
+  if(txt.replace(/ /g,"")==""||txt.replace(/\[,\]|\[_\]/g,"")=="")
+    {
+    alert("什么也不答就交卷，考试娘会伤心的QAQ~");	
+	}
+  else if(txt.replace(/^[0-9]*$/,"")=="")
+    {
+    alert("不可以只输入数字哦，这是考试娘的神~秘~规~定~");
+	}
+  else
+    {
+	document.getElementById("txtAns").value=txt.replace(/\[,\]|\[_\]/g,"");
+	document.getElementById("frmAns").submit();
+	}
+}
+--> 
+</SCRIPT>   

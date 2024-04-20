@@ -1,0 +1,55 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; mswinsck.ocx
+Reference=*\G{00025E01-0000-0000-C000-000000000046}#5.0#0#C:\Program Files (x86)\Common Files\Microsoft Shared\DAO\dao360.dll#Microsoft DAO 3.6 Object Library
+Object={EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0; ieframe.dll
+Form=frmMain.frm
+Class=CTooltip; CToolTip.cls
+Module=Main; Main.bas
+Class=cShadow; cShadow.cls
+Form=frmIcon.frm
+Module=modXCfg; modXCfg.bas
+UserControl=ucBtn.ctl
+UserControl=ucDataItem.ctl
+UserControl=ucDataList.ctl
+ResFile32="..\..\Mainfests\Theme.res"
+IconForm="frmIcon"
+Startup="frmMain"
+HelpFile=""
+Title="Examer"
+ExeName32="ExamerSvr.exe"
+Command32=""
+Name="ExamerSvr"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=0
+MinorVer=1
+RevisionVer=7
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="MaxXSoft"
+VersionFileDescription="MaxXSoft Examer Alpha 1 ºº ı‘§¿¿∞Ê"
+VersionLegalCopyright="Copyright (C) 2010-2014 MaxXSoft All rights reserved."
+VersionProductName="MaxXSoft Examer"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+DebugStartupOption=0
+
+[PowerVB Console Application Add-In]
+ConsoleApp=0
+
+[MS Transaction Server]
+AutoRefresh=1
